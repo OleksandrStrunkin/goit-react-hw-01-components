@@ -1,8 +1,10 @@
-export const DataStat = ({label, percentage}) => {
+import { StatListItem, Percentage, Label} from "./Stats.styled";
+
+export const DataStat = ({ label, percentage }) => {
     return (
-        <li class="item">
-      <span class="label">{label}</span>
-      <span class="percentage">{percentage}</span>
-    </li>
+        <StatListItem>
+      <Label>{label}</Label>
+      <Percentage>{percentage}%</Percentage>
+    </StatListItem>
     )
 };

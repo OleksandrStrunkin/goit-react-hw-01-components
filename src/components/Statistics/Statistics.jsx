@@ -1,15 +1,16 @@
 import { DataStat } from "components/Statistics/Stats/Stats";
+import { StatisticsSection, StatList, Title } from "./Statistics.styled";
 import PropTypes from 'prop-types';
 
 export const Statistics = ({ stats, title }) => {
-    return (<section class="statistics">
-    {title && (< h2 class="title">{title}</h2>)}
-    <ul class="stat-list">
+    return (<StatisticsSection>
+    {title && (<Title>{title}</Title>)}
+    <StatList>
     {stats.map(({id, label, percentage}) => {
         return <DataStat key={id} label={label} percentage={percentage} />
             })}
-  </ul>
-</section>
+  </StatList>
+</StatisticsSection>
     )
 }
 
