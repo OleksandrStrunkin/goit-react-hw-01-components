@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Td, Tr } from "./TransactionItem.styled";
 
 export const TransactionItem = ({ type, amount, currency}) => {
@@ -10,4 +11,10 @@ export const TransactionItem = ({ type, amount, currency}) => {
 
 function LetterUp (type) {
     return type[0].toUpperCase() + type.slice(1);
-}
+};
+
+TransactionItem.propTypes = {
+    type: PropTypes.string.isRequired,
+    amount: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
+};

@@ -1,4 +1,5 @@
-import { StatListItem, Percentage, Label} from "./Stats.styled";
+import PropTypes from 'prop-types';
+import { StatListItem, Percentage, Label } from "./Stats.styled";
 
 export const DataStat = ({ label, percentage }) => {
     return (
@@ -7,4 +8,9 @@ export const DataStat = ({ label, percentage }) => {
       <Percentage>{percentage}%</Percentage>
     </StatListItem>
     )
+};
+
+DataStat.propTypes = {
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
 };
